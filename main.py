@@ -36,7 +36,8 @@ def convert_rgb_to_hex(color):
 def draw_graph_and_image(colors_hex, sizes, path):
     # Builds the graph with the HEX colors and the corresponding percentages
     fig1, ax1 = plt.subplots()
-    ax1.pie(sizes, labels=colors_hex, autopct='%1.1f%%', pctdistance=0.6, shadow=False, startangle=0)
+    ax1.pie(sizes, labels=colors_hex, autopct='%1.1f%%',
+            pctdistance=0.6, shadow=False, startangle=0)
     ax1.axis('equal')
     plt.pie(sizes, colors=colors_hex)
 
@@ -62,10 +63,20 @@ def main():
     # Welcome message
     print("════════════════════════════════════════════╣ Welcome ╠════════════════════════════════════════════\n")
     print("""                        This program will extract the colors of your image.\n""")
-    print(f"""You just have to enter the name of your image, {underline}do not forget to add the extension{reset_color} (ex: image.png).""")
+
+    # List of the images in the project folder
+    images = os.listdir('./images')
+
+    print(
+        f'Choose your image {red}(image must be in the \'images\' folder){reset_color}: ')
+    for img in images:
+        if img.endswith('.png') or img.endswith('.jpg') or img.endswith('.jpeg'):
+            print(f'{images.index(img) + 1}. {img}')
 
     # Get the path of the image to extract the colors from
-    path = input(f'Enter the name of your image {red}(image must be in the project folder){reset_color}: ')
+    path = input(f'\nEnter the number of your image: ')
+    path = './images/' + images[int(path) - 1]
+
     pwd = os.path.dirname(__file__)
     path = os.path.join(pwd, path)
 

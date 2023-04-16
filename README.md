@@ -14,7 +14,9 @@ The result are (for now) given in hexadecimal and only include colors that are m
 > _Pre-requisite :_
 > _Python must be installed on your computer._
 
-Firstly, place your image in the project file (at the same location as 'main.py').
-Then, run the 'main.py' file (open the project in your IDE or right-click on 'main.py' and click Python). 
+> _You must install `extcolors` package, with `pip install extcolors`._
+
+Firstly, place your image in the project file (at the same location as `main.py`).
+Then, run the `main.py` file (open the project in your IDE or right-click on `main.py` and click Python). 
 The program will ask you for the name of the image. ***/!\ Be careful : you must add the extension of your image (.jpg, .png, etc.) /!\\***
 > Please note that it can take a few seconds for the program to extract every colors.
