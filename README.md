@@ -11,7 +11,7 @@ The result are given in hexadecimal and only include colors that are more than 1
 ---
 
 ### 🚀 How to run it?
-> _Pre-requisite :_
+> _**Pre-requisite :**_
 > _Python must be installed on your computer._
 
 > _You must install `extcolors` package, with `pip install extcolors`._
